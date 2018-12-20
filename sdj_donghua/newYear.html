@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <base href="/"> -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>whispark</title>
+	<!-- <link rel="stylesheet" href="http://host.wptest.com/static/css/bootstrap/css/bootstrap.min.css?v=1529470260518"> -->
+	<style>
+
+.del-icon{
+  width:28px;
+  height:28px;
+  position:absolute;
+  top:70px;
+  right:14px;
+}
+  .maskbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(76, 76, 76, .6);
+    z-index: 1001;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height:700px;
+  }
+  .new-bg{
+      width: 100%;
+      height: 60%;
+      background:  url('./sdj_cd.png') no-repeat center center;
+      background-size: 100% 100%;
+      position:absolute;
+      top:18%;
+  }
+  .content-box {
+    width: 50%;
+  	height: 55%;
+    background:  url('./sdj_sdlr.png') no-repeat center center;
+    background-size: 100% 100%;
+    position:absolute;
+    top:45%;
+    margin-left:24%;
+  }
+  .gift-Result{
+    width:56%;
+    height:100px;
+    margin-left:22%;
+    margin:0 auto;
+   position:absolute;
+   top: 63%;
+    left: 23%;
+  }
+  .content-detail{
+    width: 100%;
+  	height: 60%;
+    background:  url('./sdj_tc.png') no-repeat center center;
+    background-size: 100% 100%;
+    position:absolute;
+    top:18%;
+   }
+   .gift-one{
+     width:30px;
+     height:47px;
+   }
+   .gift-two{
+     width:53px;
+     height:43px;
+   }
+   .gift-three{
+     width:33px;
+     height:55px;
+   }
+   .gift-contain{
+     width:52%;
+     height:100px;
+     display:flex;
+     align-items center;
+     justify-content :space-between;
+     position:absolute;
+     margin-left:24%;
+     top:65%;
+   }
+   .result-word{
+     width:100%;
+     span{
+       color:red;
+     }
+   }
+   .result-con{
+     margin-left:10%;
+   }
+   .activity-init{
+      width: 100%;
+      height: 73%;
+      background:  url('./sdj_home_tc.png') no-repeat center center;
+      background-size: 100% 100%;
+      position:absolute;
+      top:15%;
+   }
+   .activity-con{
+     width:72%;
+     position:absolute;
+     top:54%;
+     margin-left:15%;
+   }
+  .roll{
+    position:absolute;
+    opacity:1;
+    animation: mysnow 5s infinite;
+    -webkit-animation: mysnow 5s infinite;
+    -moz-animation: mysnow 5s infinite;
+    -ms-animation: mysnow 5s infinite;
+    -o-animation: mysnow 5s infinite;
+    height:80px;
+  }
+  .drop-one{
+    width:21px;
+    height:30px;
+    left:60%;
+    top:0px;
+    animation: mysnow 6s infinite;
+  }
+  .drop-two{
+    width:47px;
+    height:42px;
+    left:22%;
+    top:0px;
+    animation: mysnow 3s infinite;
+  }
+  .drop-three{
+    width:35px;
+    height:36px;
+    left:12%;
+    top:0px;
+    animation: mysnow 3.2s infinite;
+  }
+  .drop-four{
+    width:31px;
+    height:33px;
+    left:70%;
+    top:0px;
+    animation: mysnow 3.5s infinite;
+  }
+  .drop-five{
+    width:45px;
+    height:43px;
+    left:14%;
+    top:0px;
+    animation: mysnow 4s infinite;
+  }
+  .drop-six{
+    width:52px;
+    height:37px;
+    left:84%;
+    top:0px;
+    animation: mysnow 4.5s infinite;
+  }
+  .drop-seven{
+    width:43px;
+    height:36px;
+    left:30%;
+    top:0px;
+    animation: mysnow 5.6s infinite;
+  }
+  .drop-eight{
+    width:37px;
+    height:28px;
+    left:8%;
+    top:0px;
+    animation: mysnow 5.7s infinite;
+  }
+  .drop-nine{
+    width:38px;
+    height:38px;
+    left:40%;
+    top:0px;
+    animation: mysnow 3s infinite;
+  }
+  .drop-ten{
+    width:46px;
+    height:39px;
+    left:78%;
+    top:0px;
+    animation: mysnow 3.6s infinite;
+  }
+  .drop-ele{
+    width:38px;
+    height:38px;
+    left:3%;
+    top:0px;
+    animation: mysnow 5s infinite;
+  }
+  @keyframes mysnow{
+				100%{
+					top:100%;
+				}
+	}
+	</style>
+</head>
+<body>
+  <div>
+    <!-- 遮罩层 -->
+    <div class="maskbox" id="maskbox" >
+      <img src="./gej_buttun.png" class="del-icon" @click="ClickClosePage()">
+      <!-- 显示活动内容 -->
+      <!-- 活动礼物落下的动画页面 -->
+      <div class="new-bg" id="newbg" >
+        <div class="content-box"></div>
+        <div id="snowzone" >
+          <img class="roll drop-one" id="div4" src="./dropImg/sdj_one.png" alt="">
+          <img class="roll drop-two" id="div4" src="./dropImg/sdj_two.png" alt="">
+          <img class="roll drop-three" id="div4" src="./dropImg/sdj_three.png" alt="">
+          <img class="roll drop-four" id="div4" src="./dropImg/sdj_four.png" alt="">
+          <img class="roll drop-five" id="div4" src="./dropImg/sdj_five.png" alt="">
+          <img class="roll drop-six" id="div4" src="./dropImg/sdj_six.png" alt="">
+          <img class="roll drop-seven" id="div4" src="./dropImg/sdj_sven.png" alt="">
+          <img class="roll drop-eight" id="div4" src="./dropImg/sdj_eight.png" alt="">
+          <img class="roll drop-nine" id="div4" src="./dropImg/sdj_nine.png" alt="">
+          <img class="roll drop-ten" id="div4" src="./dropImg/sdj_ten.png" alt="">
+          <img class="roll drop-ele" id="div4" src="./dropImg/sdj_ele.png" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+<script>
+			(function(){
+				setTimeout(()=>{
+          let aa=document.getElementById("snowzone");
+          document.getElementById("newbg").removeChild(aa);
+          this.showDropPage=false;
+			  },2600);
+
+		})();
+</script>
+</html>
